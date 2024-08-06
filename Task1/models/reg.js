@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const validCategories = ['CSE' , 'ECE' ,'ME' , 'CSBS' , 'IT' , 'CIVIL' , 'CE' , 'EE'];
+//const validCategories = ['CSE' , 'ECE' ,'ME' , 'CSBS' , 'IT' , 'CIVIL' , 'CE' , 'EE'];
 //connecting mongoDb with nodejs Javascript RunTime Environment
 
 //To handle initial connection errors, you should use .catch() with async/await.
@@ -25,8 +25,8 @@ mongoose.connection.once('open', (err) => {
 
 const regSchema = new mongoose.Schema({
   regd_no : {
-    type : Number,
-    maxLength : 6
+    type : String,
+    maxLength : 20
   },
   name : {
     type : String
@@ -35,11 +35,11 @@ const regSchema = new mongoose.Schema({
     type : String
     
   },
-  branch : {
+  country : {
     type : String,
     //enum : ['CSE' , 'ECE' ,'ME' , 'AI/ML' , 'CSE-DS' , 'CSBS' , 'IT' , 'CIVIL' , 'CE' , 'EE']
-    enum : validCategories,
-    select : {
+    //enum : validCategories,
+    /*select : {
       CSE : 'CSE',
       ECE : 'ECE',
       ME : 'ME' ,
@@ -48,7 +48,7 @@ const regSchema = new mongoose.Schema({
       CIVIL : 'CIVIL' ,
       CE : 'CE' ,
       EE : 'EE'
-    }
+    }*/
   }
 });
 const data = mongoose.model("data",regSchema);//collection and model name is same i.e. data

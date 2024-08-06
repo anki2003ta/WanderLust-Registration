@@ -15,13 +15,13 @@ app.post("/reg_up", (req,res) => {
   let regd_no1 = req.body.regd_no;
   let name1 = req.body.name;
   let email1 = req.body.email;
-  let branch1 = req.body.branch;
+  let country1 = req.body.country;
   //console.log(branch1);
   let data1 = new datas({
     regd_no : regd_no1,
     name : name1, 
     email : email1, 
-    branch : branch1,
+    country : country1,
   });
   data1.save()
   .then((res) => {

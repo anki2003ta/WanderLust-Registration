@@ -9,14 +9,15 @@
 <body>
   <div class="container">
     <form action="/reg_up" method="POST">
-      <label for="regd_no" >Registration Number :</label>
+      <label for="regd_no" >AADHAR Id :</label>
       <input type="text"  id="regd_no" name="regd_no">
       <label for="name" >Name :</label>
       <input type="text" placeholder="Enter Your Name" id="name" name="name">
       <label for="email" >Email :</label>
       <input type="email" placeholder="Enter Your Email" name="email">
-      <label for="branch" >Branch :</label>
-      <select name="branch" id="branch">
+      <label for="country" >Country:</label>
+      <input type="text" placeholder="Enter Your Country" id="country" name="country">
+      <!--<select name="branch" id="branch">
         <option value="CSE">CSE</option>
         <option value="ECE">ECE</option>
         <option value="ME">ME</option>
@@ -25,7 +26,7 @@
         <option value="CIVIL">CIVIL</option>
         <option value="CE">CE</option>
         <option value="EE">EE</option>
-      </select>
+      </select>-->
       <button type="submit">Submit</button>
     </form>
   </div>
